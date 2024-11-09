@@ -112,28 +112,40 @@
         }
     </style>
 
-    <nav>
-        <div class="logo">
-            <h1>ANNAPURNA CATERS</h1>
-            <h4>Phone no.- 8595082945, 9560713801</h4>
+   <!-- Navigation Menu -->
+<nav>
+    <div class="logo">
+        <h1>ANNAPURNA CATERS</h1>
+        <h4>Phone no.- 8595082945, 9560713801</h4>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#food">Foods</a></li>
+        <li><a href="#trend">Trends</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#blog">Blog</a></li>
+    </ul>
+</nav>
 
-        </div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <ul id="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#food">Foods</a></li>
-            <li><a href="#trend">Trends</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#blog">Blog</a></li>
-        </ul>
-    </nav>
+<!-- JavaScript for Toggling and Auto-Close Menu -->
+<script>
+    // Toggle menu visibility on mobile
+    function toggleMenu() {
+        document.getElementById("nav-links").classList.toggle("show");
+    }
 
-    <script>
-        // Toggle menu visibility on mobile
-        function toggleMenu() {
-            document.getElementById("nav-links").classList.toggle("show");
-        }
-    </script>
+    // Close menu when a link is clicked
+    document.querySelectorAll('#nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById("nav-links").classList.remove("show");
+        });
+    });
+</script>
+
+<!-- CSS for Menu Display -->
+
+
 
 
 
